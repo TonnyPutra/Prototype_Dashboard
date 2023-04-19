@@ -38,6 +38,7 @@ let organigram;
 let RobotoMonoSemiBold;
 let RobotoMonoMedium;
 let RobotoMonoExtraLight;
+let RobotoMonoLight;
 r = 15;
 
 //Open Weather
@@ -94,6 +95,7 @@ function preload() {
   logoKab = loadImage("Logo Kab.png");
   sumber = loadImage("sumber.png");
   organigram = loadImage("Organigram.jpg");
+  RobotoMonoLight = loadFont("RobotoMono-Light.ttf");
   RobotoMonoSemiBold = loadFont("RobotoMono-SemiBold.ttf");
   RobotoMonoMedium = loadFont("RobotoMono-Medium.ttf");
   RobotoMonoExtraLight = loadFont("RobotoMono-ExtraLight.ttf");
@@ -190,17 +192,13 @@ function Cover() {
 
   //Nama Desa
   fill("white");
-  rect(465, windowHeight / 2 + 320, 670, 75);
+  rect(465, 650, 670, 75);
   textFont(RobotoMonoMedium);
   fill("black");
   textSize(25);
-  text("DESA WAY GALIH", 690, windowHeight / 2 + 350);
+  text("DESA WAY GALIH", 690, 680);
   textSize(20);
-  text(
-    "Kec. Tanjung Bintang Kab. Lampung Selatan Prov. Lampung",
-    470,
-    windowHeight / 2 + 375
-  );
+  text("Kec. Tanjung Bintang Kab. Lampung Selatan Prov. Lampung", 470, 705);
 
   //Teks Dashboard
   fill("white");
@@ -233,16 +231,16 @@ function Cover() {
 
 //Tentang Way Galih
 function About() {
-  fill("white");
-  rect(100, 952, 800, 500);
+  fill("#EAE2B7");
+  rect(80, 940, 750, 450);
   textSize(20);
   textFont(RobotoMonoMedium);
-  fill("black");
+  fill("#071E22");
   text("Tentang Way Galih", 350, 980);
 
   textSize(16);
-  textFont(RobotoMonoExtraLight);
-
+  textFont(RobotoMonoLight);
+ 
   //Paragraf 1
   text(
     "Desa Way Galih merupakan sebuah desa yang terletak di Kecamatan ",
@@ -294,12 +292,12 @@ function About() {
 function pieChartUsia(diameterusia, dataPieUsia) {
   let lastAngle = 0;
   var piecolorusia = [
-    "#4071BC",
-    "#8A36C1",
-    "#C9124F",
-    "#36C91F",
-    "#2349C6",
-    "#0A9396",
+    "#5F0F40",
+    "#9A031E",
+    "#EAE2B7",
+    "#E36414",
+    "#0F4C5C",
+    "#FCBF49",
   ];
   for (var i = 0; i < dataPieUsia.length; i++) {
     fill(piecolorusia[i]);
@@ -342,7 +340,7 @@ function pieChartUsia(diameterusia, dataPieUsia) {
 //Data Jenis Kelamin
 function pieChartjk(diameterjk, dataPeijk) {
   let lastAnglejk = 0;
-  var piecolorjk = ["#4071BC ", "#8A36C1 "];
+  var piecolorjk = ["#1D7874 ", "#F4C095 "];
   for (var i = 0; i < dataPeijk.length; i++) {
     fill(piecolorjk[i]);
     arc(
@@ -373,7 +371,7 @@ function pieChartjk(diameterjk, dataPeijk) {
 //Data Agama
 function pieChartagama(diameter, dataPeiAgama) {
   let lastAngle = 0;
-  var piecoloragama = ["#005F73 ", "#36C91F ", "#C9124F ", "#E9D8A6 "];
+  var piecoloragama = ["#8ECAE6 ", "#219EBC ", "#023047 ", "#FFB703 "];
   for (var i = 0; i < dataPeiAgama.length; i++) {
     fill(piecoloragama[i]);
     arc(
