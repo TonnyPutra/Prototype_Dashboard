@@ -129,6 +129,11 @@ function draw() {
   fill("white");
   rect(100, 2051, 800, 400);
 
+  fill("black");
+  textFont(RobotoMonoMedium);
+  textSize(20);
+  text("Peta Desa", 1275, 1475);
+
   //Judul Bagian Data
   fill("black");
   textFont(RobotoMonoMedium);
