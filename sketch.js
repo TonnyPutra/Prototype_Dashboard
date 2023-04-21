@@ -94,7 +94,7 @@ function preload() {
   logo = loadImage("Logo.png");
   logoKab = loadImage("Logo Kab.png");
   sumber = loadImage("sumber.png");
-  organigram = loadImage("Organigram.jpg");
+  organigram = loadImage("Struktur Desa.png");
   RobotoMonoLight = loadFont("RobotoMono-Light.ttf");
   RobotoMonoSemiBold = loadFont("RobotoMono-SemiBold.ttf");
   RobotoMonoMedium = loadFont("RobotoMono-Medium.ttf");
@@ -107,7 +107,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1600, 3100);
+  createCanvas(1600, 3150);
   //map
   let div = createDiv();
   div.id("maps");
@@ -117,17 +117,15 @@ function draw() {
   background("white");
   noStroke();
 
-  // garis batas bawah
-  fill("#808080");
-  rect(0, 3099, 1600, 1);
-
   Cover();
   About();
   Weather();
 
   //Organigram
-  //image(organigram, 10, 1400, 1000, 625);
+  fill("#8ECAE6");
+  image(organigram, 10, 1425, 950, 550);
 
+  noStroke();
   fill("white");
   rect(100, 2051, 800, 400);
 
@@ -140,7 +138,7 @@ function draw() {
   fill("black");
   textFont(RobotoMonoMedium);
   textSize(30);
-  text("Data Statistik Desa Way Galih", 550, 2000);
+  text("Data Statistik Desa Way Galih", 550, 2025);
 
   anglesusia = dataUsia.getColumn("sudut");
   pieChartUsia(200, anglesusia);
@@ -156,6 +154,23 @@ function draw() {
 
   anglespek = dataPekerjaan.getColumn("sudut");
   pieChartpek(200, anglespek);
+
+  fill("#4C5762");
+  rect(0, 3000, width, 150);
+  fill("reflection");
+  textSize(20);
+  textFont(RobotoMonoSemiBold);
+  text("Desa Way Galih", 100, 3075);
+  textSize(16);
+  textFont(RobotoMonoLight);
+  text(
+    "Kecamatan Tanjung Bintang Kabupaten Lampung Selatan Provinsi Lampung Kode Pos 35361",
+    100,
+    3095
+  );
+  textSize(18);
+  text("Email   :   -", 1150, 3070);
+  text("Telp    :   +62 812-7176-3520", 1150, 3090);
 }
 
 //Informasi cuaca
@@ -226,7 +241,7 @@ function Cover() {
 
   //Jam
   textSize(30);
-  text(currentTime, 800 - 68, 45);
+  text(currentTime, 798 - 68, 45);
 }
 
 //Tentang Way Galih
@@ -240,7 +255,7 @@ function About() {
 
   textSize(16);
   textFont(RobotoMonoLight);
- 
+  //textFont(RobotoMonoSemiBold);
   //Paragraf 1
   text(
     "Desa Way Galih merupakan sebuah desa yang terletak di Kecamatan ",
